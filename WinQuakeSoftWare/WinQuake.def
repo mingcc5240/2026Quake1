@@ -1,0 +1,8 @@
+LIBRARY "WinQuake"
+EXPORTS
+    Quake_Init
+    Quake_Frame
+    Quake_KeyEvent
+    Quake_MouseMove
+    Quake_Shutdown
+    Quake_GetFrameBuffer

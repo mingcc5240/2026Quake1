@@ -403,9 +403,9 @@ int WINS_Read (int socket, byte *buf, int len, struct qsockaddr *addr)
 	if (ret == -1)
 	{
 		
-		//int errno = pWSAGetLastError();
+		int err = pWSAGetLastError();
 
-		//if (errno == WSAEWOULDBLOCK || errno == WSAECONNREFUSED)
+		if (err == WSAEWOULDBLOCK || err == WSAECONNREFUSED)
 			return 0;
 
 	}

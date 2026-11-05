@@ -71,9 +71,9 @@ void SV_CheckAllEnts (void)
 			continue;
 		if (check->v.movetype == MOVETYPE_PUSH
 		|| check->v.movetype == MOVETYPE_NONE
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		|| check->v.movetype == MOVETYPE_FOLLOW
-#endif
+//#endif
 		|| check->v.movetype == MOVETYPE_NOCLIP)
 			continue;
 
@@ -477,9 +477,9 @@ void SV_PushMove (edict_t *pusher, float movetime)
 			continue;
 		if (check->v.movetype == MOVETYPE_PUSH
 		|| check->v.movetype == MOVETYPE_NONE
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		|| check->v.movetype == MOVETYPE_FOLLOW
-#endif
+//#endif
 		|| check->v.movetype == MOVETYPE_NOCLIP)
 			continue;
 
@@ -556,7 +556,7 @@ void SV_PushMove (edict_t *pusher, float movetime)
 	
 }
 
-#ifdef QUAKE2
+//#ifdef QUAKE2
 /*
 ============
 SV_PushRotate
@@ -693,7 +693,7 @@ void SV_PushRotate (edict_t *pusher, float movetime)
 
 	
 }
-#endif
+//#endif
 
 /*
 ================
@@ -1145,7 +1145,7 @@ void SV_Physics_None (edict_t *ent)
 	SV_RunThink (ent);
 }
 
-#ifdef QUAKE2
+//#ifdef QUAKE2
 /*
 =============
 SV_Physics_Follow
@@ -1160,7 +1160,7 @@ void SV_Physics_Follow (edict_t *ent)
 	VectorAdd (PROG_TO_EDICT(ent->v.aiment)->v.origin, ent->v.v_angle, ent->v.origin);
 	SV_LinkEdict (ent, true);
 }
-#endif
+//#endif
 
 /*
 =============
@@ -1311,10 +1311,10 @@ void SV_Physics_Toss (edict_t *ent)
 	
 	if (ent->v.movetype == MOVETYPE_BOUNCE)
 		backoff = 1.5;
-#ifdef QUAKE2
+//#ifdef QUAKE2
 	else if (ent->v.movetype == MOVETYPE_BOUNCEMISSILE)
 		backoff = 2.0;
-#endif
+//#endif
 	else
 		backoff = 1;
 
@@ -1537,19 +1537,19 @@ void SV_Physics (void)
 			SV_Physics_Pusher (ent);
 		else if (ent->v.movetype == MOVETYPE_NONE)
 			SV_Physics_None (ent);
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		else if (ent->v.movetype == MOVETYPE_FOLLOW)
 			SV_Physics_Follow (ent);
-#endif
+//#endif
 		else if (ent->v.movetype == MOVETYPE_NOCLIP)
 			SV_Physics_Noclip (ent);
 		else if (ent->v.movetype == MOVETYPE_STEP)
 			SV_Physics_Step (ent);
 		else if (ent->v.movetype == MOVETYPE_TOSS 
 		|| ent->v.movetype == MOVETYPE_BOUNCE
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		|| ent->v.movetype == MOVETYPE_BOUNCEMISSILE
-#endif
+//#endif
 		|| ent->v.movetype == MOVETYPE_FLY
 		|| ent->v.movetype == MOVETYPE_FLYMISSILE)
 			SV_Physics_Toss (ent);

@@ -51,7 +51,7 @@ static	vec3_t	vec_origin = {0.0, 0.0, 0.0};
 
 #define	MOVE_EPSILON	0.01
 
-void SV_Physics_Toss (edict_t *ent);
+void SV_s_Toss (edict_t *ent);
 
 /*
 ================
@@ -697,7 +697,7 @@ void SV_PushRotate (edict_t *pusher, float movetime)
 
 /*
 ================
-SV_Physics_Pusher
+SV_s_Pusher
 
 ================
 */
@@ -1311,10 +1311,10 @@ void SV_Physics_Toss (edict_t *ent)
 	
 	if (ent->v.movetype == MOVETYPE_BOUNCE)
 		backoff = 1.5;
-#ifdef QUAKE2
+//#ifdef QUAKE2
 	else if (ent->v.movetype == MOVETYPE_BOUNCEMISSILE)
 		backoff = 2.0;
-#endif
+//#endif
 	else
 		backoff = 1;
 
@@ -1547,9 +1547,9 @@ void SV_Physics (void)
 			SV_Physics_Step (ent);
 		else if (ent->v.movetype == MOVETYPE_TOSS 
 		|| ent->v.movetype == MOVETYPE_BOUNCE
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		|| ent->v.movetype == MOVETYPE_BOUNCEMISSILE
-#endif
+//#endif
 		|| ent->v.movetype == MOVETYPE_FLY
 		|| ent->v.movetype == MOVETYPE_FLYMISSILE)
 			SV_Physics_Toss (ent);

@@ -721,11 +721,11 @@ void SV_Physics_Pusher (edict_t *ent)
 
 	if (movetime)
 	{
-//#ifdef QUAKE2
+#ifdef QUAKE2
 		if (ent->v.avelocity[0] || ent->v.avelocity[1] || ent->v.avelocity[2])
 			SV_PushRotate (ent, movetime);
 		else
-//#endif
+#endif
 			SV_PushMove (ent, movetime);	// advances ent->v.ltime if not blocked
 	}
 		
@@ -1537,10 +1537,10 @@ void SV_Physics (void)
 			SV_Physics_Pusher (ent);
 		else if (ent->v.movetype == MOVETYPE_NONE)
 			SV_Physics_None (ent);
-#ifdef QUAKE2
+//#ifdef QUAKE2
 		else if (ent->v.movetype == MOVETYPE_FOLLOW)
 			SV_Physics_Follow (ent);
-#endif
+//#endif
 		else if (ent->v.movetype == MOVETYPE_NOCLIP)
 			SV_Physics_Noclip (ent);
 		else if (ent->v.movetype == MOVETYPE_STEP)

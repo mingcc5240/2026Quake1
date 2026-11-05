@@ -372,7 +372,7 @@ Con_Printf
 Handles cursor positioning, line wrapping, etc
 ================
 */
-#define	MAXPRINTMSG	4096
+#define	MAXPRINTMSG	32768
 // FIXME: make a buffer size safe vsprintf?
 void Con_Printf (char *fmt, ...)
 {
@@ -381,8 +381,9 @@ void Con_Printf (char *fmt, ...)
 	static qboolean	inupdate;
 	
 	va_start (argptr,fmt);
-	vsprintf (msg,fmt,argptr);
-	va_end (argptr);
+    _vsnprintf (msg, sizeof(msg) - 1, fmt, argptr);
+    msg[sizeof(msg) - 1] = 0;
+    va_end (argptr);
 	
 // also echo to debugging console
 	Sys_Printf ("%s", msg);	// also echo to debugging console

@@ -139,31 +139,31 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BRUSH.C" />
-    <ClCompile Include="..\..\BSPFILE.C" />
-    <ClCompile Include="..\..\CMDLIB.C" />
-    <ClCompile Include="..\..\CSG4.C" />
-    <ClCompile Include="..\..\MAP.C" />
-    <ClCompile Include="..\..\MATHLIB.C" />
-    <ClCompile Include="..\..\MERGE.C" />
-    <ClCompile Include="..\..\NODRAW.C" />
-    <ClCompile Include="..\..\OUTSIDE.C" />
-    <ClCompile Include="..\..\PORTALS.C" />
-    <ClCompile Include="..\..\QBSP.C" />
-    <ClCompile Include="..\..\qbsp_dll.c" />
-    <ClCompile Include="..\..\REGION.C" />
-    <ClCompile Include="..\..\SOLIDBSP.C" />
-    <ClCompile Include="..\..\SURFACES.C" />
-    <ClCompile Include="..\..\TJUNC.C" />
-    <ClCompile Include="..\..\WRITEBSP.C" />
+    <ClCompile Include="BRUSH.C" />
+    <ClCompile Include="BSPFILE.C" />
+    <ClCompile Include="CMDLIB.C" />
+    <ClCompile Include="CSG4.C" />
+    <ClCompile Include="MAP.C" />
+    <ClCompile Include="MATHLIB.C" />
+    <ClCompile Include="MERGE.C" />
+    <ClCompile Include="NODRAW.C" />
+    <ClCompile Include="OUTSIDE.C" />
+    <ClCompile Include="PORTALS.C" />
+    <ClCompile Include="QBSP.C" />
+    <ClCompile Include="qbsp_dll.c" />
+    <ClCompile Include="REGION.C" />
+    <ClCompile Include="SOLIDBSP.C" />
+    <ClCompile Include="SURFACES.C" />
+    <ClCompile Include="TJUNC.C" />
+    <ClCompile Include="WRITEBSP.C" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\BSP5.H" />
-    <ClInclude Include="..\..\BSPFILE.H" />
-    <ClInclude Include="..\..\CMDLIB.H" />
-    <ClInclude Include="..\..\MAP.H" />
-    <ClInclude Include="..\..\MATHLIB.H" />
-    <ClInclude Include="..\..\qbsp_dll.h" />
+    <ClInclude Include="BSP5.H" />
+    <ClInclude Include="BSPFILE.H" />
+    <ClInclude Include="CMDLIB.H" />
+    <ClInclude Include="MAP.H" />
+    <ClInclude Include="MATHLIB.H" />
+    <ClInclude Include="qbsp_dll.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

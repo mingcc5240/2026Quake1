@@ -139,20 +139,20 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BSPFILE.C" />
-    <ClCompile Include="..\..\CMDLIB.C" />
-    <ClCompile Include="..\..\FLOW.C" />
-    <ClCompile Include="..\..\MATHLIB.C" />
-    <ClCompile Include="..\..\SOUNDPVS.C" />
-    <ClCompile Include="..\..\VIS.C" />
-    <ClCompile Include="..\..\vis_dll.c" />
+    <ClCompile Include="BSPFILE.C" />
+    <ClCompile Include="CMDLIB.C" />
+    <ClCompile Include="FLOW.C" />
+    <ClCompile Include="MATHLIB.C" />
+    <ClCompile Include="SOUNDPVS.C" />
+    <ClCompile Include="VIS.C" />
+    <ClCompile Include="vis_dll.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\BSPFILE.H" />
-    <ClInclude Include="..\..\CMDLIB.H" />
-    <ClInclude Include="..\..\MATHLIB.H" />
-    <ClInclude Include="..\..\VIS.H" />
-    <ClInclude Include="..\..\vis_dll.h" />
+    <ClInclude Include="BSPFILE.H" />
+    <ClInclude Include="CMDLIB.H" />
+    <ClInclude Include="MATHLIB.H" />
+    <ClInclude Include="VIS.H" />
+    <ClInclude Include="vis_dll.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

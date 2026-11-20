@@ -1,0 +1,14 @@
+LIBRARY "glquake"
+EXPORTS
+    VB_QuakeInit
+    VB_QuakeFrame
+    VB_QuakeSetMouseGrab
+    VB_QuakeShutdown
+    VB_QuakeCommand
+    VB_QuakeGetEntityInfo
+    VB_QuakePushAllMonsters
+    VB_QuakeFreezeMonsters
+    VB_QuakeControlDoors
+    VB_QuakeSetEntityPhysics
+    VB_QuakeGetPlayerPos
+    VB_QuakeGetModelPos

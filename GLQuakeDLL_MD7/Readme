@@ -1,0 +1,7 @@
+Add loading gamestudio md3, md7 model mdl!
+<usage>
+Press ~
+spawnmdl progs/earth.mdl
+spawnmdl progs/cbabe.mdl 4 7 
+mdl -1 addpos 0 0 50
+Have a nice day!!
